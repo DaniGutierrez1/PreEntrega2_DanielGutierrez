@@ -1,0 +1,243 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Lobster&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+} 
+
+body{
+    color: #fffffe;
+}
+h1 a{
+    font-size: 60px;
+    color: #fffffe;
+    text-decoration: none;
+}
+
+
+body nav{
+    font-size: 40px;
+    background:#7f5af0;
+    width: 800px;
+    height: fit-content;
+    margin-left: auto;
+    
+}
+
+body nav ul{
+    list-style: none 
+}
+
+body nav ul li {
+    display: inline-block;
+    position: relative;
+}
+
+body nav ul li a{
+    text-align: center;
+    color: #fffffe; 
+    text-decoration: none;
+} 
+
+body nav ul li a:hover{
+    color: #2cb67d
+}
+
+h2{
+    font-size: 40px ;
+    color: #fffffe;
+}
+
+h3{
+    font-size: 40px;
+    color: #fffffe;
+}
+p{
+    font-size: 30px;
+    color:#94a1b2; 
+}
+
+footer nav{
+    font-size: 30px;
+    background: #7f5af0;
+    height: 10vh;
+    width: 100%;
+}
+
+footer div nav ul li a{
+    text-align: center;
+    color: #fffffe; 
+    text-decoration: none;
+} 
+
+
+#letra{
+    font-family: 'Anton', sans-serif;
+}
+.color_letra_general{
+    color: #94a1b2
+}
+
+.fondo{
+    background:#16161a;
+    width: 100%;
+    height: 90vh;
+}
+
+.encabezado{
+    display: inline-block;
+    width: 100%;
+}
+.encabezado__logo{
+    display: inline-block;
+}
+
+.encabezado__menu{
+    display: inline-block;
+    position: relative;
+    padding-left: 39%;
+}
+
+.seccion__arriba__texto{
+    display: inline-block;
+    text-align: center;
+}
+.seccion__arriba__foto{
+    display: inline-block;
+    padding-left: 10%;
+}
+
+
+.seccion__abajo__foto{
+    display: inline-block;
+}
+.seccion__abajo__texto{
+    display: inline-block;
+}
+
+
+.armas__riflesasalto{
+    text-align: center;
+    padding: 5%;
+}
+.armas__riflesasalto__1{
+    display: inline-block;
+    text-align: center;
+}
+.armas__riflesasalto__2{
+    display: inline-block
+}
+
+
+.armas__subfusil{
+    text-align: center;
+    padding: 5%;
+}
+.armas__subfusil__1{
+    display: inline-block;
+    
+}
+.armas__subfusil__2{
+    display: inline-block;
+}
+
+.leyenda{
+    display: block;
+    text-align: center;
+    align-content: center;
+}
+
+
+.habilidades{
+    display: block;
+    
+}
+
+
+.habilidades__pasiva{
+    display: block;
+}
+.habilidades__pasiva__imagen{
+    display: inline-block;
+}
+.habilidades__pasiva__texto{
+    display: inline-block;
+}
+
+
+.habilidades__tactica{
+    display: block;
+}
+.habilidades__tactica__imagen{
+    display: inline-block;
+}
+.habilidades__tactica__texto{
+    display: inline-block;
+}
+
+
+.habilidades__definitiva{
+    display: block;
+}
+.habilidades__definitiva__imagen{
+    display: inline-block;
+    
+}
+.habilidades__definitiva__texto{
+    display: inline-block;
+}
+
+
+.mapa{
+    text-align: center;
+}
+.mapa__arriba{
+    display: inline-block;
+}
+.mapa__medio{
+    padding: 5% ;
+    display: block;
+}
+.mapa__abajo{
+    display: inline-block;
+}
+
+
+.modos{
+    border:red 9px solid ;    
+}
+
+
+.modos__battle{
+    display: inline-block;
+    padding-top: 3%;
+}
+.modos__battle__imagen{
+    display: inline-block;
+}
+.modos__battle__texto{
+    display: inline-block;
+}
+
+
+.modos__arena{
+    display: inline-block;
+    text-align: right;
+    width: 90%;
+    padding-top: 3%;
+    
+}
+.modos__arena__texto{
+    display: inline-block;
+    text-align: center;
+    
+}
+.modos__arena__imagen{
+    display: inline-block;
+}
+
+
+.Pie_de_pagina{ 
+    margin-right: auto;
+}
