@@ -45,16 +45,13 @@ body nav ul li a:hover{
 }
 
 h2{
-    font-size: 40px ;
     color: #fffffe;
 }
 
-h3{
-    font-size: 40px;
+h3{ 
     color: #fffffe;
 }
 p{
-    font-size: 30px;
     color:#94a1b2; 
 }
 
@@ -76,9 +73,7 @@ footer div nav ul li a{
     font-family: 'Anton', sans-serif;
     color:#94a1b2;
 }
-.color_letra_general{
-    color: #94a1b2
-}
+
 .fondo{
     background:#16161a;
     width: 100%;
@@ -89,28 +84,8 @@ footer div nav ul li a{
 }
 
 
-.encabezado{
-    grid-area:header;
-    display: flex;
-    height: 20vh;
-    width: 100%;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    padding-bottom:5%;
-}
-.encabezado__menu{
-    margin-left: 20%;
-}
 
-/* .seccion__arriba{
-    grid-area: principal;
-    display: flex;
-    flex: row;
-    align-items: center;
-    justify-content: space-around;
-    padding-bottom: 10%;
-} */
+
 
 .seccion__medio{
     grid-area:medio;
