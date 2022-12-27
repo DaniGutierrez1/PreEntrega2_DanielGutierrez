@@ -51,12 +51,10 @@ h2{
 h3{ 
     color: #fffffe;
 }
-p{
-    color:#94a1b2; 
-}
+
 
 footer nav{
-    font-size: 30px;
+    font-size: 26px;
     background: #7f5af0;
     height: 10vh;
     width: 100%;
@@ -84,23 +82,6 @@ footer div nav ul li a{
 }
 
 
-
-
-
-.seccion__medio{
-    grid-area:medio;
-    display: flex;
-    width: 100%;
-    padding-bottom: 10%;
-}
-
-
-.seccion__abajo__foto{
-    display: inline-block;
-}
-.seccion__abajo__texto{
-    display: inline-block;
-}
 
 
 .armas__riflesasalto{
@@ -141,38 +122,7 @@ footer div nav ul li a{
 }
 
 
-.habilidades__pasiva{
-    display: block;
-}
-.habilidades__pasiva__imagen{
-    display: inline-block;
-}
-.habilidades__pasiva__texto{
-    display: inline-block;
-}
 
-
-.habilidades__tactica{
-    display: block;
-}
-.habilidades__tactica__imagen{
-    display: inline-block;
-}
-.habilidades__tactica__texto{
-    display: inline-block;
-}
-
-
-.habilidades__definitiva{
-    display: block;
-}
-.habilidades__definitiva__imagen{
-    display: inline-block;
-    
-}
-.habilidades__definitiva__texto{
-    display: inline-block;
-}
 
 
 .mapa{
