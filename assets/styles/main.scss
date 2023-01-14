@@ -1,0 +1,6 @@
+//Importo bootstrap para trabajar con SASS 
+@use "../node_modules/bootstrap/scss/bootstrap";
+
+//Importo el contenido y variables 
+@use '_commons';
+@use '_footer';

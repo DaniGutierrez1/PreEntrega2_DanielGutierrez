@@ -1,10 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Lobster&display=swap');
 
-*{
-    margin: 0;
-    padding: 0;
-} 
 
 body{
     color: #fffffe;
@@ -69,7 +65,6 @@ footer div nav ul li a{
 
 #letra{
     font-family: 'Anton', sans-serif;
-    color:#94a1b2;
 }
 
 .fondo{
