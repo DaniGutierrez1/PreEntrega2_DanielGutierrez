@@ -13,7 +13,15 @@ body{
 
 h1{
     font-size: 60px;
-    &:nth-child(1){
+    a{
         color: map-get(c.$colores,titulares);
+        text-decoration: none;
+    }
+}
+
+body{
+    nav{
+        font-size: 40px;
+        color:map-get(c.$colores,nav)
     }
 }
