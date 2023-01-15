@@ -22,6 +22,26 @@ h1{
 body{
     nav{
         font-size: 40px;
-        color:map-get(c.$colores,nav)
+        color:map-get(c.$colores,nav);
+            ul{
+                list-style: none;
+                    li{
+                    display: inline-block;
+                    position: relative;
+                        a{
+                        text-align: center;
+                        color:map-get(c.$colores,nav);
+                            & :hover{
+                            color: map-get(c.$colores,resaltado);
+                            }
+                        }
+                    }
+            }
     }
+    
 }
+
+h2,h3{
+    @extend h1
+}
+
