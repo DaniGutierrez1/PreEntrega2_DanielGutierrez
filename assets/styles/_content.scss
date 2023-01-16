@@ -5,24 +5,20 @@
     padding: 0;
 } 
 
-body{
-    width: 100%;
-    height: 90vh;
-    background-color: map-get(c.$colores,fondo);
-}
-
 h1{
     font-size: 60px;
     a{
-        color: map-get(c.$colores,titulares);
+        color: map-get(c.$colores,"titulares");
         text-decoration: none;
     }
 }
 
 body{
+    width: 100%;
+    height: 90vh;
     nav{
         font-size: 40px;
-        color:map-get(c.$colores,nav);
+        color:map-get(c.$colores,"nav");
             ul{
                 list-style: none;
                     li{
@@ -30,9 +26,9 @@ body{
                     position: relative;
                         a{
                         text-align: center;
-                        color:map-get(c.$colores,nav);
+                        color:map-get(c.$colores,"nav");
                             & :hover{
-                            color: map-get(c.$colores,resaltado);
+                            color: map-get(c.$colores,"resaltado");
                             }
                         }
                     }
@@ -42,6 +38,50 @@ body{
 }
 
 h2,h3{
-    @extend h1
+    @extend h1 ;
 }
 
+
+//Utilizo clases para pisar los colores de
+.color__fondo{
+    background-color:map-get(c.$colores,"fondo") ;
+}
+
+.color__letra{
+    color:map-get(c.$colores,"letra") ;
+}
+
+.color__navbar{
+    background-color: map-get(c.$colores,"barra");
+}
+
+.box__container__mapa__1{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    text-align: center;
+    gap: 10px;
+
+
+}
+.box__mapa__1{
+    width: calc(c.$ancho-box/3);
+    height: c.$alto-box ;
+
+}
+
+.box__container__mapa__2{
+    @extend .box__container__mapa__1;
+}
+
+.box__container__mapa__3{
+    @extend .box__container__mapa__1;
+}
+
+.box__mapa__3{
+    @extend .box__mapa__1;
+}
+#letra{
+    font-family: 'Anton', sans-serif;
+}

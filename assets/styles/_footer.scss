@@ -1,1 +1,21 @@
 @use '_commons' as c;
+
+footer{
+    height: 10vh;
+    width: 100%;
+    nav{
+            ul{
+                li{
+                    a{
+                        text-align: center;
+                        color: #fffffe; 
+                        text-decoration: none;
+                    }
+                }
+            }
+    }
+}
+
+.Pie_de_pagina{ 
+    margin-right: auto;
+}
