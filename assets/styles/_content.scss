@@ -131,6 +131,7 @@ h2,h3{
     grid-area:Subfus;
 }
 
+//Con el container para armar la estructura me explotó todo y no supe como arreglarlo. Lo tenia para que estuviese en columna pero lo queria en fila. Cuando lo pude poner explotó la pagina de armas y se fue el contenido para los limites.
 #container{
     display: grid;
     grid-template-columns: repeat(4,25%);
@@ -150,28 +151,30 @@ h2,h3{
     font-family: 'Anton', sans-serif;
 }
 
+//Media query para cuando este en formato escritorio asi aparece la imagen restante y la letra se agranda
 @media only screen and (min-width:1280px){
     .box__container__mapa__1{
         padding: 10px;
     }
-    .box__mapa__1-especial{
-        display: flex;
-        width: calc(c.$ancho-box/3);
-        height:c.$alto-box ;
-    }
+
     .box__mapa__1{
         width: calc(c.$ancho-box/3);
         height: calc(c.$alto-box + 200px);
+        &-especial{
+            display: flex;
+        }
     }
     .box__mapa__2{
         @extend.box__mapa__1;
     }
-    .box__mapa__3-especial{
-        @extend.box__mapa__1-especial;
-    }
+
     .box__mapa__3{
         @extend.box__mapa__1;
+        &-especial{
+            @extend.box__mapa__1-especial
+        }
     }
+
     p{
         font-size:x-large;
     }

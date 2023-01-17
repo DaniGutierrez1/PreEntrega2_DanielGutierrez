@@ -103,14 +103,12 @@ body nav ul li a {
   .box__container__mapa__1, .box__container__mapa__2, .box__container__mapa__3, .box__container__modos__1, .box__container__modos__2 {
     padding: 10px;
   }
-  .box__mapa__1-especial, .box__mapa__3-especial {
-    display: flex;
-    width: 26.6666666667%;
-    height: 100px;
-  }
   .box__mapa__1, .box__mapa__1-especial, .box__mapa__2, .box__mapa__3, .box__mapa__3-especial {
     width: 26.6666666667%;
     height: 300px;
+  }
+  .box__mapa__1-especial, .box__mapa__3-especial {
+    display: flex;
   }
   p {
     font-size: x-large;
