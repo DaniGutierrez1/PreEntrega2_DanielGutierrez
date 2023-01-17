@@ -46,18 +46,18 @@ h2,h3{
 .color__fondo{
     background-color:map-get(c.$colores,"fondo") ;
 }
-
 .color__letra{
     color:map-get(c.$colores,"letra") ;
 }
-
 .color__navbar{
     background-color: map-get(c.$colores,"barra");
 }
 
+
 .box__container__mapa__1{
     display: flex;
     justify-content: center;
+    align-content: center;
     align-content: center;
     flex-direction: row;
     text-align: center;
@@ -71,17 +71,31 @@ h2,h3{
 
 }
 
+
 .box__container__mapa__2{
     @extend .box__container__mapa__1;
 }
 
+
 .box__container__mapa__3{
     @extend .box__container__mapa__1;
 }
-
 .box__mapa__3{
     @extend .box__mapa__1;
 }
+
+
+.box__container__modos__1{
+    @extend.box__container__mapa__1;
+    justify-content:space-around;
+    
+}
+
+.box__container__modos__2{
+    @extend.box__container__mapa__1;
+    justify-content: space-around;
+}
+
 #letra{
     font-family: 'Anton', sans-serif;
 }

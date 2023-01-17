@@ -41,9 +41,10 @@ body nav ul li a {
   background-color: #7f5af0;
 }
 
-.box__container__mapa__1, .box__container__mapa__3, .box__container__mapa__2 {
+.box__container__mapa__1, .box__container__modos__2, .box__container__modos__1, .box__container__mapa__3, .box__container__mapa__2 {
   display: flex;
   justify-content: center;
+  align-content: center;
   align-content: center;
   flex-direction: row;
   text-align: center;
@@ -53,6 +54,14 @@ body nav ul li a {
 .box__mapa__1, .box__mapa__3 {
   width: 26.6666666667%;
   height: 300px;
+}
+
+.box__container__modos__1 {
+  justify-content: space-around;
+}
+
+.box__container__modos__2 {
+  justify-content: space-around;
 }
 
 #letra {
