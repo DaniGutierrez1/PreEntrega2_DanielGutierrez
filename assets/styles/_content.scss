@@ -56,24 +56,31 @@ h2,h3{
 
 .box__container__mapa__1{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-content: center;
-    align-content: center;
+    align-items: center;
     flex-direction: row;
     text-align: center;
     gap: 10px;
-
-
+    padding: 30px;
 }
 .box__mapa__1{
-    width: calc(c.$ancho-box/3);
+    width: calc(c.$ancho-box/2);
     height: c.$alto-box ;
+
+}
+.box__mapa__1-especial{
+    @extend.box__mapa__1;
+    display: none;
 
 }
 
 
 .box__container__mapa__2{
     @extend .box__container__mapa__1;
+}
+.box__mapa__2{
+    @extend.box__mapa__1;
 }
 
 
@@ -83,6 +90,10 @@ h2,h3{
 .box__mapa__3{
     @extend .box__mapa__1;
 }
+.box__mapa__3-especial{
+    @extend.box__mapa__1-especial;
+}
+
 
 
 .box__container__modos__1{
@@ -91,11 +102,77 @@ h2,h3{
     
 }
 
+
 .box__container__modos__2{
     @extend.box__container__mapa__1;
     justify-content: space-around;
 }
 
+
+.encabezado{
+    grid-area: head;
+}
+
+.armas__fusiles{
+    grid-area: Fusiles;
+    align-content: center;
+    gap:10px;
+    
+}
+.armas__fusiles__container{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+
+.armas__subfusiles{
+    @extend.armas__fusiles;
+    grid-area:Subfus;
+}
+
+#container{
+    display: grid;
+    grid-template-columns: repeat(4,25%);
+    grid-template-rows: 2fr 2fr 2fr 2fr ;
+    grid-template-areas: 
+    
+    "head" "head" "head" "head"
+    "Fusiles Fusiles Fusiles"
+    "Subfus"
+    "Escopetas"
+    "Pistolas"
+    ;
+}
+
+
 #letra{
     font-family: 'Anton', sans-serif;
+}
+
+@media only screen and (min-width:1280px){
+    .box__container__mapa__1{
+        padding: 10px;
+    }
+    .box__mapa__1-especial{
+        display: flex;
+        width: calc(c.$ancho-box/3);
+        height:c.$alto-box ;
+    }
+    .box__mapa__1{
+        width: calc(c.$ancho-box/3);
+        height: calc(c.$alto-box + 200px);
+    }
+    .box__mapa__2{
+        @extend.box__mapa__1;
+    }
+    .box__mapa__3-especial{
+        @extend.box__mapa__1-especial;
+    }
+    .box__mapa__3{
+        @extend.box__mapa__1;
+    }
+    p{
+        font-size:x-large;
+    }
 }
