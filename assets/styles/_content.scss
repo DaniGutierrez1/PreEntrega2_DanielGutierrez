@@ -43,6 +43,10 @@ h2,h3{
     color: map-get(c.$colores,"titulares");
 }
 
+//Saco la linea del hipervinculo de los botones
+div a {
+    text-decoration: none;
+}
 
 //Utilizo clases para pisar los colores de
 .color__fondo{
@@ -124,10 +128,14 @@ h2,h3{
 
 .boton{
     background-color: map-get(c.$colores , "boton");
-    text-decoration: none;
+    padding: 5px;
+    border-radius: 3px;
+    margin: 5px;
+    color: map-get(c.$colores,"boton_color");
+
+
     
 }
-
 .armas__fusiles{
     grid-area: fusiles;
     align-content: center;
@@ -142,27 +150,74 @@ h2,h3{
     align-items: center;
     
 }
-
-
 .armas__subfusiles{
     @extend.armas__fusiles;
     grid-area:subfus;
     &__container{
-        @extend.armas__fusiles__container
+        @extend.armas__fusiles__container;
     }
 }
 
 
+.armas__escopetas{
+    @extend .armas__fusiles;
+    grid-area:escopetas;
+
+    &__container{
+        @extend.armas__fusiles__container;
+    }
+}
+
+
+.armas__franco{
+    @extend.armas__fusiles;
+    grid-area: franco;
+
+    &__container{
+        @extend.armas__fusiles__container;
+    }
+}
+
+
+.armas__ametralladoras{
+    @extend.armas__fusiles;
+    grid-area:ligera;
+
+    &__container{
+        @extend.armas__fusiles__container;
+    }
+}
+
+.armas__medioalc{
+    @extend.armas__fusiles;
+    grid-area: alc;
+
+    &__container{
+        @extend.armas__fusiles__container;
+    }
+}
+
+.armas__pistolas{
+    @extend.armas__fusiles;
+    grid-area:pistolas;
+
+    &__container{
+        @extend.armas__fusiles__container;
+    }
+}
 #contenedor{
     display: grid;
     grid-template-columns: repeat(2,50%);
-    grid-template-rows: 2fr 2fr 2fr 2fr ;
+    grid-template-rows: 2fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr;
     grid-template-areas: 
     
     "head head"
     "fusiles fusiles"
     "subfus subfus"
     "escopetas escopetas"
+    "franco franco"
+    "ligera ligera"
+    "alc alc"
     "pistolas pistolas"
     ;
 }

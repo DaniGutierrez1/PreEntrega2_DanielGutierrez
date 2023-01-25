@@ -33,6 +33,10 @@ h2, h3 {
   color: #fffffe;
 }
 
+div a {
+  text-decoration: none;
+}
+
 .color__fondo {
   background-color: #16161a;
 }
@@ -86,10 +90,13 @@ h2, h3 {
 
 .boton {
   background-color: #7f5af0;
-  text-decoration: none;
+  padding: 5px;
+  border-radius: 3px;
+  margin: 5px;
+  color: #fffffe;
 }
 
-.armas__fusiles, .armas__subfusiles {
+.armas__fusiles, .armas__pistolas, .armas__medioalc, .armas__ametralladoras, .armas__franco, .armas__escopetas, .armas__subfusiles {
   grid-area: fusiles;
   align-content: center;
   gap: 10px;
@@ -97,7 +104,7 @@ h2, h3 {
   text-align: center;
 }
 
-.armas__fusiles__container, .armas__subfusiles__container {
+.armas__fusiles__container, .armas__pistolas__container, .armas__medioalc__container, .armas__ametralladoras__container, .armas__franco__container, .armas__escopetas__container, .armas__subfusiles__container {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -107,11 +114,26 @@ h2, h3 {
 .armas__subfusiles {
   grid-area: subfus;
 }
+.armas__escopetas {
+  grid-area: escopetas;
+}
+.armas__franco {
+  grid-area: franco;
+}
+.armas__ametralladoras {
+  grid-area: ligera;
+}
+.armas__medioalc {
+  grid-area: alc;
+}
+.armas__pistolas {
+  grid-area: pistolas;
+}
 #contenedor {
   display: grid;
   grid-template-columns: repeat(2, 50%);
-  grid-template-rows: 2fr 2fr 2fr 2fr;
-  grid-template-areas: "head head" "fusiles fusiles" "subfus subfus" "escopetas escopetas" "pistolas pistolas";
+  grid-template-rows: 2fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr;
+  grid-template-areas: "head head" "fusiles fusiles" "subfus subfus" "escopetas escopetas" "franco franco" "ligera ligera" "alc alc" "pistolas pistolas";
 }
 
 #letra {
