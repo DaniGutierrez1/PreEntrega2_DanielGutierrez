@@ -119,12 +119,85 @@ div a {
     grid-area: head;
 }
 
-.armas__items{
-    background-color: map-get(c.$colores,"cartas") ;
-    border-radius: 3px;
-    padding: 10px;
-    margin: 10px;
+
+.armas{
+    &__items{
+        background-color: map-get(c.$colores,"cartas") ;
+        border-radius: 3px;
+        padding: 10px;
+        margin: 10px;
+    }
+
+    &__fusiles{
+        grid-area: fusiles;
+    align-content: center;
+    gap:10px;
+    padding-bottom: 30px;
+    text-align: center;
+
+    &__container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    }
+
+    &__subfusiles{
+        @extend.armas__fusiles;
+        grid-area:subfus;
+        &__container{
+            @extend.armas__fusiles__container;
+        }
+    }
+
+    &__escopetas{
+        @extend .armas__fusiles;
+    grid-area:escopetas;
+
+    &__container{
+        @extend.armas__fusiles__container;
+    }
+    }
+
+    &__franco{
+        @extend.armas__fusiles;
+    grid-area: franco;
+
+    &__container{
+        @extend.armas__fusiles__container;
+    }
+    }
+
+    &__ametralladoras{
+        @extend.armas__fusiles;
+        grid-area:ligera;
+    
+        &__container{
+            @extend.armas__fusiles__container;
+        }
+    }
+
+    &__medioalc{
+        @extend.armas__fusiles;
+        grid-area: alc;
+    
+        &__container{
+            @extend.armas__fusiles__container;
+        }
+    }
+
+    &__pistolas{
+        @extend.armas__fusiles;
+        grid-area:pistolas;
+    
+        &__container{
+            @extend.armas__fusiles__container;
+        }
+    }
+    
 }
+
 
 .boton{
     background-color: map-get(c.$colores , "boton");
@@ -136,75 +209,8 @@ div a {
 
     
 }
-.armas__fusiles{
-    grid-area: fusiles;
-    align-content: center;
-    gap:10px;
-    padding-bottom: 30px;
-    text-align: center;
-}
-.armas__fusiles__container{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    
-}
-.armas__subfusiles{
-    @extend.armas__fusiles;
-    grid-area:subfus;
-    &__container{
-        @extend.armas__fusiles__container;
-    }
-}
 
 
-.armas__escopetas{
-    @extend .armas__fusiles;
-    grid-area:escopetas;
-
-    &__container{
-        @extend.armas__fusiles__container;
-    }
-}
-
-
-.armas__franco{
-    @extend.armas__fusiles;
-    grid-area: franco;
-
-    &__container{
-        @extend.armas__fusiles__container;
-    }
-}
-
-
-.armas__ametralladoras{
-    @extend.armas__fusiles;
-    grid-area:ligera;
-
-    &__container{
-        @extend.armas__fusiles__container;
-    }
-}
-
-.armas__medioalc{
-    @extend.armas__fusiles;
-    grid-area: alc;
-
-    &__container{
-        @extend.armas__fusiles__container;
-    }
-}
-
-.armas__pistolas{
-    @extend.armas__fusiles;
-    grid-area:pistolas;
-
-    &__container{
-        @extend.armas__fusiles__container;
-    }
-}
 #contenedor{
     display: grid;
     grid-template-columns: repeat(2,50%);
