@@ -29,6 +29,10 @@ body nav ul li {
 body nav ul li a {
   text-align: center;
 }
+h2, h3 {
+  color: #fffffe;
+}
+
 .color__fondo {
   background-color: #16161a;
 }
@@ -73,26 +77,41 @@ body nav ul li a {
   grid-area: head;
 }
 
-.armas__fusiles, .armas__subfusiles {
-  grid-area: Fusiles;
-  align-content: center;
-  gap: 10px;
+.armas__items {
+  background-color: #242629;
+  border-radius: 3px;
+  padding: 10px;
+  margin: 10px;
 }
 
-.armas__fusiles__container {
+.boton {
+  background-color: #7f5af0;
+  text-decoration: none;
+}
+
+.armas__fusiles, .armas__subfusiles {
+  grid-area: fusiles;
+  align-content: center;
+  gap: 10px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.armas__fusiles__container, .armas__subfusiles__container {
   display: flex;
   flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .armas__subfusiles {
-  grid-area: Subfus;
+  grid-area: subfus;
 }
-
-#container {
+#contenedor {
   display: grid;
-  grid-template-columns: repeat(4, 25%);
+  grid-template-columns: repeat(2, 50%);
   grid-template-rows: 2fr 2fr 2fr 2fr;
-  grid-template-areas: "head" "head" "head" "head" "Fusiles Fusiles Fusiles" "Subfus" "Escopetas" "Pistolas";
+  grid-template-areas: "head head" "fusiles fusiles" "subfus subfus" "escopetas escopetas" "pistolas pistolas";
 }
 
 #letra {
