@@ -48,6 +48,9 @@ div a {
     text-decoration: none;
 }
 
+img{
+    object-fit: cover;
+}
 //Utilizo clases para pisar los colores de
 .color__fondo{
     background-color:map-get(c.$colores,"fondo") ;
@@ -60,19 +63,34 @@ div a {
 }
 
 
+
+
+.imagen{
+    object-fit: cover;
+}
+
+.box__container__mapa{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    
+}
 .box__container__mapa__1{
     display: flex;
     justify-content: space-around;
     align-content: center;
     align-items: center;
-    flex-direction: row;
+    flex-direction: column;
     text-align: center;
     gap: 10px;
-    padding: 30px;
+    margin: 10px;
+    
+    
+    
 }
 .box__mapa__1{
-    width: calc(c.$ancho-box/2);
     height: c.$alto-box ;
+    object-fit: cover;
 
 }
 .box__mapa__1-especial{
@@ -84,6 +102,8 @@ div a {
 
 .box__container__mapa__2{
     @extend .box__container__mapa__1;
+    height: 200px;
+    align-content: center;
 }
 .box__mapa__2{
     @extend.box__mapa__1;
@@ -101,17 +121,31 @@ div a {
 }
 
 
+//
 
 .box__container__modos__1{
     @extend.box__container__mapa__1;
-    justify-content:space-around;
+    flex-direction: column;
+    margin-bottom: 30px;
     
 }
 
-
 .box__container__modos__2{
     @extend.box__container__mapa__1;
-    justify-content: space-around;
+    flex-direction: column-reverse;
+
+}
+
+.box__modos{
+    padding: 10px;
+    margin: 10px;
+}
+.modos__items{
+    background-color: map-get(c.$colores,"cartas");
+    border-radius:3px ;
+    width: 100%;
+    height: fit-content;
+
 }
 
 
@@ -126,14 +160,17 @@ div a {
         border-radius: 3px;
         padding: 10px;
         margin: 10px;
-    }
+        height: c.$alto-card;
+        width: c.$ancho-card;
 
+    
+    }
     &__fusiles{
         grid-area: fusiles;
-    align-content: center;
-    gap:10px;
-    padding-bottom: 30px;
-    text-align: center;
+        align-content: center;
+        gap:10px;
+        padding-bottom: 30px;
+        text-align: center;
 
     &__container{
         display: flex;
@@ -205,6 +242,7 @@ div a {
     border-radius: 3px;
     margin: 5px;
     color: map-get(c.$colores,"boton_color");
+    align-content: center;
 
 
     
@@ -213,18 +251,18 @@ div a {
 
 #contenedor{
     display: grid;
-    grid-template-columns: repeat(2,50%);
-    grid-template-rows: 2fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(8,2fr);
     grid-template-areas: 
     
-    "head head"
-    "fusiles fusiles"
-    "subfus subfus"
-    "escopetas escopetas"
-    "franco franco"
-    "ligera ligera"
-    "alc alc"
-    "pistolas pistolas"
+    "head"
+    "fusiles"
+    "subfus"
+    "escopetas"
+    "franco"
+    "ligera"
+    "alc"
+    "pistolas"
     ;
 }
 
@@ -237,11 +275,12 @@ div a {
 @media only screen and (min-width:1280px){
     .box__container__mapa__1{
         padding: 10px;
+        flex-direction: row;
     }
 
     .box__mapa__1{
         width: calc(c.$ancho-box/3);
-        height: calc(c.$alto-box + 200px);
+        height:c.$alto-box;
         &-especial{
             display: flex;
         }
@@ -259,5 +298,27 @@ div a {
 
     p{
         font-size:x-large;
+    }
+
+    .box__container__modos{
+        flex-direction: row;
+    }
+    
+    .modos__items{
+        height: c.$alto-card;
+
+    }
+
+
+    #container{
+        display: grid;
+        grid-template-columns: repeat(3,33.33%);
+        grid-template-rows: repeat(8,3fr);
+        grid-template-areas: none
+        
+        "head head head"
+        "fusiles fusiles fusiles"
+        "subfus subfus subfus"
+        "escopetas escopetas escopetas";
     }
 }
