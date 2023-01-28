@@ -122,29 +122,44 @@ img{
 
 
 //
-
+.box__container__modos{
+    @extend.box__container__mapa;
+    padding: 0;
+}
+.box__container__titulos{
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+    margin: 10px;
+}
 .box__container__modos__1{
     @extend.box__container__mapa__1;
-    flex-direction: column;
-    margin-bottom: 30px;
+    margin: 20px;
     
 }
 
 .box__container__modos__2{
-    @extend.box__container__mapa__1;
-    flex-direction: column-reverse;
+    @extend.box__container__modos__1;
 
 }
 
 .box__modos{
-    padding: 10px;
-    margin: 10px;
+    &__1{
+        @extend.box__mapa__1;
+        height: calc(c.$alto-box + 100px);
+    }
+
+    &__2{
+        @extend.box__mapa__1;
+    }
 }
 .modos__items{
     background-color: map-get(c.$colores,"cartas");
     border-radius:3px ;
-    width: 100%;
+    width: fit-content;
     height: fit-content;
+    text-align: center;
+    align-content: center;
 
 }
 
@@ -273,9 +288,17 @@ img{
 
 //Media query para cuando este en formato escritorio asi aparece la imagen restante y la letra se agranda
 @media only screen and (min-width:1280px){
-    .box__container__mapa__1{
-        padding: 10px;
-        flex-direction: row;
+    .box__container__mapa{
+        &__1{
+            padding: 10px;
+            flex-direction: row;
+        }
+        &__2{
+            flex-direction: row;
+            width: 100%;
+            height: calc(c.$alto-box + 100px);
+
+        }
     }
 
     .box__mapa__1{
@@ -300,12 +323,20 @@ img{
         font-size:x-large;
     }
 
-    .box__container__modos{
-        flex-direction: row;
+
+    .box__modos{
+        &__1{
+            width: 80%;
+            height: 500px;
+        }
     }
     
     .modos__items{
-        height: c.$alto-card;
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        text-align: center;
+        
 
     }
 

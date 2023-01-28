@@ -59,13 +59,13 @@ img {
      object-fit: cover;
 }
 
-.box__container__mapa {
+.box__container__mapa, .box__container__modos {
   width: 100%;
   height: 100%;
   padding: 10px;
 }
 
-.box__container__mapa__1, .box__container__modos__2, .box__container__modos__1, .box__container__mapa__3, .box__container__mapa__2 {
+.box__container__mapa__1, .box__container__modos__1, .box__container__modos__2, .box__container__mapa__3, .box__container__mapa__2 {
   display: flex;
   justify-content: space-around;
   align-content: center;
@@ -76,7 +76,7 @@ img {
   margin: 10px;
 }
 
-.box__mapa__1, .box__mapa__3, .box__mapa__2, .box__mapa__1-especial, .box__mapa__3-especial {
+.box__mapa__1, .box__modos__2, .box__modos__1, .box__mapa__3, .box__mapa__2, .box__mapa__1-especial, .box__mapa__3-especial {
   height: 290px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -91,27 +91,37 @@ img {
   align-content: center;
 }
 
-.box__container__modos__1 {
-  flex-direction: column;
-  margin-bottom: 30px;
+.box__container__modos {
+  padding: 0;
 }
 
-.box__container__modos__2 {
-  flex-direction: column-reverse;
-}
-
-.box__modos {
-  padding: 10px;
-  margin: 10px;
-}
-
-.modos__items {
-  background-color: #242629;
-  border-radius: 3px;
+.box__container__titulos {
   width: 100%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  text-align: center;
+  margin: 10px;
+}
+
+.box__container__modos__1, .box__container__modos__2 {
+  margin: 20px;
+}
+
+.box__modos__1 {
+  height: 390px;
+}
+.modos__items {
+  background-color: #242629;
+  border-radius: 3px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  text-align: center;
+  align-content: center;
 }
 
 .encabezado {
@@ -182,7 +192,12 @@ img {
     padding: 10px;
     flex-direction: row;
   }
-  .box__mapa__1, .box__mapa__1-especial, .box__mapa__2, .box__mapa__3, .box__mapa__3-especial {
+  .box__container__mapa__2 {
+    flex-direction: row;
+    width: 100%;
+    height: 390px;
+  }
+  .box__mapa__1, .box__mapa__1-especial, .box__mapa__2, .box__mapa__3, .box__mapa__3-especial, .box__modos__1, .box__modos__2 {
     width: 33.3333333333%;
     height: 290px;
   }
@@ -192,11 +207,15 @@ img {
   p {
     font-size: x-large;
   }
-  .box__container__modos {
-    flex-direction: row;
+  .box__modos__1 {
+    width: 80%;
+    height: 500px;
   }
   .modos__items {
-    height: 350px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    text-align: center;
   }
   #container {
     display: grid;
