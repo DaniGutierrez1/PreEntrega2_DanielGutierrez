@@ -181,6 +181,13 @@ img{
         margin: 10px;
         height: c.$alto-card;
         width: c.$ancho-card;
+        align-content: center;
+        text-align: center;
+        align-items: center;
+        &:hover{
+            transform: scale(1.1);
+        }
+        
 
     
     }
@@ -191,12 +198,12 @@ img{
         padding-bottom: 30px;
         text-align: center;
 
-    &__container{
+        &__container{
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
         align-items: center;
-    }
+        }
     }
 
     &__subfusiles{
@@ -262,6 +269,9 @@ img{
     margin: 5px;
     color: map-get(c.$colores,"boton_color");
     align-content: center;
+    align-items: center;
+    text-align: center;
+    width: 50%;
 
 
     
@@ -342,10 +352,6 @@ img{
         text-align: center;
         align-items: center;
 
-    
-
-        
-        
 
     }
 
@@ -361,4 +367,9 @@ img{
         "subfus subfus subfus"
         "escopetas escopetas escopetas";
     }
+
+    .armas__items{
+        height:calc(c.$alto-box + 200px);
+    }
+
 }

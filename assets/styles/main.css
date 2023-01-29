@@ -138,6 +138,12 @@ img {
   margin: 10px;
   height: 350px;
   width: 300px;
+  align-content: center;
+  text-align: center;
+  align-items: center;
+}
+.armas__items:hover {
+  transform: scale(1.1);
 }
 .armas__fusiles, .armas__pistolas, .armas__medioalc, .armas__ametralladoras, .armas__franco, .armas__escopetas, .armas__subfusiles {
   grid-area: fusiles;
@@ -177,6 +183,9 @@ img {
   margin: 5px;
   color: #fffffe;
   align-content: center;
+  align-items: center;
+  text-align: center;
+  width: 50%;
 }
 
 #contenedor {
@@ -227,6 +236,9 @@ img {
     grid-template-rows: repeat(8, 3fr);
     grid-template-areas: none "head head head" "fusiles fusiles fusiles" "subfus subfus subfus" "escopetas escopetas escopetas";
   }
+  .armas__items {
+    height: 490px;
+  }
 }
 footer {
   height: 10vh;
@@ -239,5 +251,24 @@ footer nav ul li a {
 }
 
 .Pie_de_pagina {
-  margin-right: auto;
+  text-align: left;
+}
+
+.redes__twitter {
+  width: 25px;
+}
+.redes__twitter:hover {
+  transform: scale(1.4);
+}
+.redes__instagram {
+  width: 35px;
+}
+.redes__instagram:hover {
+  transform: scale(1.4);
+}
+
+@media only screen and (min-width: 1280px) {
+  .Pie_de_pagina {
+    padding: 15px;
+  }
 }/*# sourceMappingURL=main.css.map */

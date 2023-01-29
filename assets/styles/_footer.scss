@@ -17,5 +17,27 @@ footer{
 }
 
 .Pie_de_pagina{ 
-    margin-right: auto;
+    text-align: left;
+}
+
+.redes{
+    &__twitter{
+        width: c.$alto-redes;
+        &:hover{
+            transform: scale(1.4);
+        }
+    }
+    &__instagram{
+        width: calc(c.$alto-redes + 10px);
+        &:hover{
+            transform: scale(1.4);
+        }
+    }
+    
+}
+
+@media only screen and (min-width:1280px){
+    .Pie_de_pagina{
+        padding: 15px;
+    }
 }
